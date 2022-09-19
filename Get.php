@@ -1,11 +1,9 @@
 <?php
-
 $result = '';
 if (isset($_GET['calculator'])) {
     $a = isset($_GET['a']) ? $_GET['a'] : '';
     $b = isset($_GET['b']) ? $_GET['b'] : '';
     $c = isset($_GET['c']) ? $_GET['c'] : '';
-    //Kiểm tra dữ liệu client
     if ($a == "" || $b == "" || $c == "") {
         echo 'Phép tính bị lỗi, vui lòng nhập đủ';
     } else if ($a >= 'a' && $a <= 'z' || $a >= 'A' && $a <= 'Z' || $b >= 'a' && $b <= 'z' || $b >= 'A' && $b <= 'Z' || $c >= 'a' && $c <= 'z' || $c >= 'A' && $c <= 'Z') {
